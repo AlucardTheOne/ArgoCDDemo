@@ -24,7 +24,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t ghcr.io/alucardtheone/argocddemo:latest .
-          docker tag ghcr.io/alucardtheone/argocddemo:latest ghcr.io/AlucardTheOne/ArgoCDDemo:${{ github.sha }}
+          docker tag ghcr.io/alucardtheone/argocddemo:latest ghcr.io/alucardtheone/argocddemo:${{ github.sha }}
 
       - name: Login to GHCR
         uses: docker/login-action@v2
